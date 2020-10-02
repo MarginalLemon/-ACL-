@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACL</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <!--头部区域-->
+        <a id="top"></a>
+        <div class="header">
+            <img src="img/cat.jfif" height="60px"/>
+            <h1>文件ACL访问控制模拟</h1>
+        </div>
+        <!--导航栏-->
+        <div class="navigation">
+            <ul class="na">
+                <li style="background-color: rgb(140, 131, 163);"><a href="#top">主页</a></li>
+                <div class="dropdown">
+                    <div class="dropbtn">ROOT 操作</div>
+                    <div class="dropdown-content">
+                        <a href="#file_operation">文件操作</a>
+                        <a href="#user_operation">用户操作</a>
+                        <a href="#power_operation">权限操作</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <!--内容-->
+        <!--文件-->
+        <div class="title1">
+            <h2>文件列表</h2>
+        </div>
+        <div class="row" id="fileView">
+            <div class="picturediv">
+                <img src="img/file2.jpg"/>
+                <span>
+                    <input type="radio" name="file" value="file0"/>file0
+                </span>
+            </div>
+        </div>
+        <!--用户-->
+        <div class="title1">
+            <h2>用户列表</h2>
+        </div>
+        <div class="row" id="userView">
+            <div class="picturediv">
+                <img src="img/timg2.jpg"/>
+                <span>
+                    <input type="radio" name="user" value="0"/>u1
+                </span>
+            </div>
+        </div>
+
+        <!--提交-->
+        <div class="subdiv" id="verify">
+            <input type="checkbox" name="verify" value="r"/>读
+            <input type="checkbox" name="verify" value="w"/>写
+            <input type="checkbox" name="verify" value="x"/>执行
+            <button id="submit">Submit</button>
+        </div><hr/>
+        
+
+        <!--文件操作-->
+        <a id="file_operation"></a>
+        <div class="root-o">
+            <!--头部区域-->
+            <div class="header">
+                <img src="img/cat.jfif" height="60px"/>
+                <h1>文件ACL访问控制模拟</h1>
+            </div>
+            <!--导航栏-->
+            <div class="navigation">
+                <ul class="na">
+                    <li><a href="#top">主页</a></li>
+                    <div class="dropdown">
+                        <div class="dropbtn" style="background-color: rgb(140, 131, 163);">ROOT 操作</div>
+                        <div class="dropdown-content">
+                            <a href="#file_operation">文件操作</a>
+                            <a href="#user_operation">用户操作</a>
+                            <a href="#power_operation">权限操作</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!--内容-->
+            <!--修改文件操作-->
+            <div class="title1">
+                <h2>文件操作</h2>
+            </div>
+            <hr/>
+            <p class="hint" id="fileHint"> </p>
+            <div class="operation" id="alterFile">
+                文件名：<input type="text" id="mFile"/><br/>
+                <span class="option">
+                    <input type="radio" name="fop" value="add">创建新文件
+                </span><br/>
+                <span class="option">
+                    <input type="radio" name="fop" value="del">删除旧文件<br/>
+                </span><br/>
+                <span class="option2">
+                    <button id="mf">Submit</button>
+                </span>
+            </div>
+        </div>
+
+        <!--用户操作-->
+        <a id="user_operation"></a>
+        <div class="root-o">
+            <!--头部区域-->
+            <div class="header">
+                <img src="img/cat.jfif" height="60px"/>
+                <h1>文件ACL访问控制模拟</h1>
+            </div>
+            <!--导航栏-->
+            <div class="navigation">
+                <ul class="na">
+                    <li><a href="#top">主页</a></li>
+                    <div class="dropdown">
+                        <div class="dropbtn" style="background-color: rgb(140, 131, 163);">ROOT 操作</div>
+                        <div class="dropdown-content">
+                            <a href="#file_operation">文件操作</a>
+                            <a href="#user_operation">用户操作</a>
+                            <a href="#power_operation">权限操作</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!--内容-->
+            <!--用户操作-->
+            <div class="title1">
+                <h2>用户操作</h2>
+            </div>
+            <hr/>
+            <p class="hint" id="userHint"> </p>
+            <div class="operation" id="alterUser">
+                用户名：<input type="text" id="mUser"/><br/>
+                <span class="option">
+                    <input type="radio" name="uop" value="add">创建新用户
+                </span><br/>
+                <span class="option">
+                    <input type="radio" name="uop" value="del">删除旧用户<br/>
+                </span><br/>
+                <span class="option2">
+                    <button id="mu" >Submit</button>
+                </span>
+            </div>
+        </div>
+        
+        <!--权限分配操作-->
+        <a id="power_operation"></a>
+        <div class="root-o">
+            <!--头部区域-->
+            <div class="header">
+                <img src="img/cat.jfif" height="60px"/>
+                <h1>文件ACL访问控制模拟</h1>
+            </div>
+            <!--导航栏-->
+            <div class="navigation">
+                <ul class="na">
+                    <li><a href="#top">主页</a></li>
+                    <div class="dropdown">
+                        <div class="dropbtn" style="background-color: rgb(140, 131, 163);">ROOT 操作</div>
+                        <div class="dropdown-content">
+                            <a href="#file_operation">文件操作</a>
+                            <a href="#user_operation">用户操作</a>
+                            <a href="#power_operation">权限操作</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <!--内容-->
+            <!--文件-->
+            <div class="title1">
+                <h2>文件列表</h2>
+            </div>
+            <div class="row" id="fileView2">
+                <div class="picturediv">
+                    <img src="img/file2.jpg"/>
+                    <span>
+                        <input type="radio" name="file" value="file0"/>file0
+                    </span>
+                </div>
+            </div>
+            <!--用户-->
+            <div class="title1">
+                <h2>用户列表</h2>
+            </div>
+            <div class="row" id="userView2">
+                <div class="picturediv">
+                    <img src="img/timg2.jpg"/>
+                    <span>
+                        <input type="radio" name="user" value="0"/>u1
+                    </span>
+                </div>
+            </div>
+
+            <!--提交-->
+            <div class="subdiv" id="modifyPermissions">
+                <input type="checkbox" name="modify" value="r"/>读
+                <input type="checkbox" name="modify" value="w"/>写
+                <input type="checkbox" name="modify" value="x"/>执行
+                <button id="modify">更改权限</button>
+            </div><hr/>
+        </div>
+
+        <!--验证通过-->
+        <a id="succeed"></a>
+        <div class="root-o">
+            <!--头部区域-->
+            <div class="header">
+                <img src="img/cat.jfif" height="60px"/>
+                <h1>文件ACL访问控制模拟</h1>
+            </div>
+            <!--导航栏-->
+            <div class="navigation">
+                <ul class="na">
+                    <li><a href="#top">主页</a></li>
+                    <div class="dropdown">
+                        <div class="dropbtn">ROOT 操作</div>
+                        <div class="dropdown-content">
+                            <a href="#file_operation">文件操作</a>
+                            <a href="#user_operation">用户操作</a>
+                            <a href="#power_operation">权限操作</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!--内容-->
+            <div class="tip">
+                <img src="img/success.jfif">
+                <div class="message">
+                    <span class="p1">Successfully Verified!</span><br/>
+                    <span class="p2">You can operate accordingly.</span>
+                    <br/><br/>
+                </div>
+                <button class="submit2"><a href="#top">Return</a></button>
+            </div>
+        </div>
+
+        <!--验证失败-->
+        <a id="failing"></a>
+        <div class="root-o">
+            <!--头部区域-->
+            <div class="header">
+                <img src="img/cat.jfif" height="60px"/>
+                <h1>文件ACL访问控制模拟</h1>
+            </div>
+            <!--导航栏-->
+            <div class="navigation">
+                <ul class="na">
+                    <li><a href="#top">主页</a></li>
+                    <div class="dropdown">
+                        <div class="dropbtn">ROOT 操作</div>
+                        <div class="dropdown-content">
+                            <a href="#file_operation">文件操作</a>
+                            <a href="#user_operation">用户操作</a>
+                            <a href="#power_operation">权限操作</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!--内容-->
+            <div class="tip">
+                <img src="img/failing.jfif">
+                <div class="message">
+                    <span class="p1">Validation Failed!</span><br/>
+                    <span class="p2">You don't have the right.</span>
+                    <br/><br/>
+                </div>
+                <button class="submit2"><a href="#top">Return</a></button>
+            </div>
+        </div>
+
+        <script src="main.js" ></script>
+    </body>
+</html>
